@@ -1,0 +1,16 @@
+include header.pug
+body
+    p TEST
+    div.wrapper
+        header.header
+            div(class="header_container _container")
+                a(href="", class="header_logo") FARBOX
+                nav(class="header_menu menu")
+        div.catalog__page
+            div(class="catalog__container _container")
+                div.catalog__body
+                    each val, index in goods
+                        include card.pug
+        include nav
+    include footer
+

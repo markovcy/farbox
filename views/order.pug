@@ -1,0 +1,63 @@
+include header
+body
+    div.wrapper
+        include site-header
+        div._container
+            div.row
+                div.goods__header
+                    h3.order__header
+                    div(id='cart-nav')
+                .order__title 
+                    h3 Create order
+                .order__form
+                    form#order__form(action='')
+                        .form-control 
+                            label(for='username') Name
+                            input(
+                                class="field",
+                                type='text',
+                                id='username',
+                                placeholder='enter your name',
+                                value="Oleg"
+                            )
+                        .form-control 
+                            label(for='phone') Phone
+                            input(
+                                class="field",
+                                type='text',
+                                id='phone',
+                                placeholder='enter your phone',
+                                value="557788"
+                            )
+                        .form-control 
+                            label(for='email') Email
+                            input(
+                                class="field",
+                                type='text',
+                                id='email',
+                                placeholder='enter your email',
+                                value="55@ua"
+                            )
+                        .form-control 
+                            label(for='address') Address
+                            textarea(
+                                class="field",
+                                id='address',
+                                placeholder='enter your address',
+                                value="ulica"
+                            )
+                        .form-control 
+                            label(for='rule') Rule
+                            input(
+                                type='checkbox',
+                                id='rule',
+                                value="1"
+                            )
+                            span Terms and conditions
+                        div(class='form-control text-right')
+                            button(class="button-primary", type="submit") Finish order
+    include footer
+    script(src='javascripts/order.js')
+                        
+                        
+                    

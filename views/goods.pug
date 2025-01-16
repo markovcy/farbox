@@ -1,0 +1,25 @@
+include header.pug
+body
+    div.wrapper
+        include site-header
+        div._container
+            div.row
+                div.goods__header
+                    h2.goods__title #{goods[0]['name']}
+            .goods__image
+                img(
+                    src='/images/'+goods[0]['image']
+                )
+            .goods_description
+                p #{goods[0]['description']}
+                span #{goods[0]['cost']} uah
+                button(
+                    class='goods__button add-to-cart'
+                    data-goods_id=goods[0]['id']
+                ) to cart
+        include nav
+    include footer
+            //- each val, index in categories
+            //-     div 
+            //-         p
+            //-             a(href="cat?id="+val['id']) #{val['category']}

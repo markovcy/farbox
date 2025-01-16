@@ -1,0 +1,12 @@
+include header.pug
+body
+    p TEST
+    div.wrapper
+        include site-header
+        div
+            each val, index in categories
+                div 
+                    p
+                        a(href="cat?id="+val['id']) #{val['category']}
+        include nav
+    include footer

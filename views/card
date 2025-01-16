@@ -1,0 +1,9 @@
+div.catalog__column
+    div.catalog__item
+        div.catalog__img
+            img(src="images/"+val['image'])
+        div.catalog__info
+            div.catalog__name   
+                p #{val['name']} 
+            div.catalog__price
+                p #{val['cost']}  грн

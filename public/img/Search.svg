@@ -1,0 +1,9 @@
+<svg width="208" height="20" viewBox="0 0 208 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Search">
+<g id="search">
+<path id="Oval" fill-rule="evenodd" clip-rule="evenodd" d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Path" d="M18.9984 18.9984L14.6484 14.6484" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<line id="Line 18" x1="28" y1="19.5" x2="208" y2="19.5" stroke="white"/>
+</g>
+</svg>

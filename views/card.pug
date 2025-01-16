@@ -1,0 +1,14 @@
+div.catalog__column
+    a(href="goods?id="+val['id'])
+        div.catalog__item
+            div.catalog__img
+                img(src="images/"+val['image'])
+            div.catalog__info
+                div.catalog__name   
+                    p #{val['name']} 
+                div.catalog__price
+                    p #{val['cost']}  грн
+    button(
+        class="catalog__button add-to-cart"
+        data-goods_id = val['id']
+    ) to cart

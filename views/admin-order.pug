@@ -1,0 +1,26 @@
+h1 Admin-panel
+h2 Order-information
+table
+    tr
+        th id
+        th date
+        th userID
+        th goods_id
+        th Goods cost 
+        th Goods amount
+        th Total
+        th Name
+        th Phone
+        th Address
+    each val, index in order
+        tr
+            td #{val['id']}
+            td #{val['human_date']}
+            td #{val['user_id']}
+            td #{val['goods_id']}
+            td #{val['goods_cost'].toFixed(2)}
+            td #{val['goods_amount']}
+            td #{val['total'].toFixed(2)}
+            td #{val['user_name']}
+            td #{val['user_phone']}
+            td #{val['address']}

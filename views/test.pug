@@ -1,0 +1,19 @@
+include header.pug
+body
+    p TEST
+    div.wrapper
+        header.header
+            div(class="header_container _container")
+                a(href="", class="header_logo") FARBOX
+                nav(class="header_menu menu")
+                    ul.menu_list
+                        li.menu_item
+                            a(href="", class="menu_link") Home
+                        li.menu_item
+                            a(href="", class="menu_link") Product
+                        li.menu_item
+                            a(href="", class="menu_link") Pracing
+                        li.menu_item
+                            a(href="", class="menu_link") Contact
+    each val, index in goods
+        p #{val} 
