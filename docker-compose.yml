@@ -1,0 +1,49 @@
+volumes:
+  my-db:
+
+networks:
+  cloudfared:
+    name: cloudfared
+
+services:
+  db:
+    image: mysql:5.7.44
+    restart: unless-stopped
+    networks:
+      - cloudfared
+    environment:
+      MYSQL_DATABASE: "shop"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "user"
+      MYSQL_ROOT_PASSWORD: "root2"
+    volumes:
+      - my-db:/var/lib/mysql
+  frontend:
+    build: ./
+    restart: unless-stopped
+    networks:
+      - cloudfared
+    environment:
+      DB_HOST: "db"
+      DB_PORT: "3306"
+      DB_DATABASE: "shop"
+      DB_USER: "user"
+      DB_PASSWORD: "user"
+    ports:
+      - 3000:3000
+    volumes:
+      - my-db:/var/lib/mysql
+  phpmyadmin:
+    image: phpmyadmin
+    restart: unless-stopped
+    networks:
+      - cloudfared
+    environment:
+      PMA_ARBITRARY: 1
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "user"
+      MYSQL_ROOT_PASSWORD: "root"
+      PMA_HOST: "db"
+      PMA_PORT: "3306"
+    ports:
+      - 8080:80

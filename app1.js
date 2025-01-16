@@ -27,10 +27,11 @@ app.use(express.urlencoded({extended: true}));
 app.use(cookieParser());
 
 let con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root2',
-    database: 'shop'
+    host: process.env.DB_HOST || 'localhost',
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || 'root2',
+    database: process.env.DB_DATABASE || 'shop',
+    port: process.env.DB_PORT || 3306
 })
 
 process.env["NODE_TLC_REJECT_UNAUTHORIZED"] = 0;
